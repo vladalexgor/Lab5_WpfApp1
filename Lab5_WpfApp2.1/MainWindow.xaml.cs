@@ -64,15 +64,15 @@ namespace Lab5_WpfApp2
             saveFileDialog.Filter = "PNG (*.png)|*.png|JPEG (*.jpg)|*.jpg";
             if (saveFileDialog.ShowDialog() == true)
             {
-                int width = (int)this.field.ActualWidth;
-                int height = (int)this.field.ActualHeight;
-                RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap(width, height, 96d, 96d, PixelFormats.Default);
-                renderTargetBitmap.Render(field);
-                BmpBitmapEncoder encoder = new BmpBitmapEncoder();
-                encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
-                FileStream fileStream = File.Open(saveFileDialog.FileName, FileMode.Create);
-                encoder.Save(fileStream);
-                fileStream.Close();
+                //int width = (int)this.field.ActualWidth;
+                //int height = (int)this.field.ActualHeight;
+                //RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap(width, height, 96d, 96d, PixelFormats.Default);
+                //renderTargetBitmap.Render(field);
+                //BmpBitmapEncoder encoder = new BmpBitmapEncoder();
+                //encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+                //FileStream fileStream = File.Open(saveFileDialog.FileName, FileMode.Create);
+                //encoder.Save(fileStream);
+                //fileStream.Close();
             }
         }
     }
