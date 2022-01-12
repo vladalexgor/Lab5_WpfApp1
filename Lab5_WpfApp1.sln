@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenSaveDialog", "OpenSaveDialog\OpenSaveDialog.csproj", "{CC01D19D-5730-47ED-A63F-8760A28314B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5_WpfApp2", "..\Lab5_WpfApp2\Lab5_WpfApp2\Lab5_WpfApp2.csproj", "{40DFBDE3-F5D9-41C9-B2A8-3F6F19CE8A79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5_WpfApp2", "Lab5_WpfApp2.1\Lab5_WpfApp2.csproj", "{D1E3528F-2A63-4293-BD89-BE3480DC29CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{CC01D19D-5730-47ED-A63F-8760A28314B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC01D19D-5730-47ED-A63F-8760A28314B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC01D19D-5730-47ED-A63F-8760A28314B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{40DFBDE3-F5D9-41C9-B2A8-3F6F19CE8A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40DFBDE3-F5D9-41C9-B2A8-3F6F19CE8A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40DFBDE3-F5D9-41C9-B2A8-3F6F19CE8A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40DFBDE3-F5D9-41C9-B2A8-3F6F19CE8A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1E3528F-2A63-4293-BD89-BE3480DC29CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E3528F-2A63-4293-BD89-BE3480DC29CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E3528F-2A63-4293-BD89-BE3480DC29CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E3528F-2A63-4293-BD89-BE3480DC29CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
