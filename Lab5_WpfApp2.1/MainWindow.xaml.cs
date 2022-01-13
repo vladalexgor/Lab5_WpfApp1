@@ -72,7 +72,6 @@ namespace Lab5_WpfApp2
                 field.Arrange(new Rect(new Size(width, height)));
                 renderTargetBitmap.Render(field);
                 PngBitmapEncoder encoder = new PngBitmapEncoder();
-                //BmpBitmapEncoder encoder = new BmpBitmapEncoder();
                 encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
                 FileStream fileStream = File.Open(saveFileDialog.FileName, FileMode.Create);
                 encoder.Save(fileStream);
