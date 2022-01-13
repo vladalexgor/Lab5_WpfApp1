@@ -53,8 +53,9 @@ namespace Lab5_WpfApp2
             openFileDialog.Filter = "PNG (*.png)|*.png|JPEG (*.jpg)|*.jpg";
             if (openFileDialog.ShowDialog() == true)
             {
-                //a= new BitmapImage(new Uri(openFileDialog.FileName, UriKind.Absolute));
-                //field.Background = File.(openFileDialog.FileName);
+                ImageBrush imageBrush = new ImageBrush();
+                imageBrush.ImageSource = new BitmapImage(new Uri(openFileDialog.FileName, UriKind.Relative));
+                field.Background = imageBrush;
             }
         }
 
@@ -64,15 +65,18 @@ namespace Lab5_WpfApp2
             saveFileDialog.Filter = "PNG (*.png)|*.png|JPEG (*.jpg)|*.jpg";
             if (saveFileDialog.ShowDialog() == true)
             {
-                //int width = (int)this.field.ActualWidth;
-                //int height = (int)this.field.ActualHeight;
-                //RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap(width, height, 96d, 96d, PixelFormats.Default);
-                //renderTargetBitmap.Render(field);
+                int width = (int)this.field.ActualWidth;
+                int height = (int)this.field.ActualHeight;
+                RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap(width, height, 96d, 96d, PixelFormats.Default);
+                field.Measure(new Size(width, height));
+                field.Arrange(new Rect(new Size(width, height)));
+                renderTargetBitmap.Render(field);
+                PngBitmapEncoder encoder = new PngBitmapEncoder();
                 //BmpBitmapEncoder encoder = new BmpBitmapEncoder();
-                //encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
-                //FileStream fileStream = File.Open(saveFileDialog.FileName, FileMode.Create);
-                //encoder.Save(fileStream);
-                //fileStream.Close();
+                encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+                FileStream fileStream = File.Open(saveFileDialog.FileName, FileMode.Create);
+                encoder.Save(fileStream);
+                fileStream.Close();
             }
         }
     }

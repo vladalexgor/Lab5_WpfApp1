@@ -101,5 +101,8 @@
     <Resource Include="Data\Открыть.PNG" />
     <Resource Include="Data\Сохранить.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\Курсор_Выбор.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

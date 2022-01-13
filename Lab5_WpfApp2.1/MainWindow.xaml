@@ -39,7 +39,9 @@
             <Button Click="Button_Click">
                 <Image Source="Data/Ластик.png"/>
             </Button>
-            <Button Content="Select" Click="Button_Click_2"/>
+            <Button Click="Button_Click_2">
+                <Image Source="Data/Курсор_Выбор.png" Height="25"/>
+            </Button>
         </ToolBar>
         <InkCanvas x:Name="field" Grid.Row="2" Margin="5" EditingMode="None"/>
     </Grid>
