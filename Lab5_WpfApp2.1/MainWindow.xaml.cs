@@ -67,12 +67,12 @@ namespace Lab5_WpfApp2
             {
                 int width = (int)this.field.ActualWidth;
                 int height = (int)this.field.ActualHeight;
-                RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap(width, height, 96d, 96d, PixelFormats.Default);
+                RenderTargetBitmap rtb = new RenderTargetBitmap(width, height, 96d, 96d, PixelFormats.Default);
                 field.Measure(new Size(width, height));
                 field.Arrange(new Rect(new Size(width, height)));
-                renderTargetBitmap.Render(field);
+                rtb.Render(field);
                 PngBitmapEncoder encoder = new PngBitmapEncoder();
-                encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+                encoder.Frames.Add(BitmapFrame.Create(rtb));
                 FileStream fileStream = File.Open(saveFileDialog.FileName, FileMode.Create);
                 encoder.Save(fileStream);
                 fileStream.Close();
